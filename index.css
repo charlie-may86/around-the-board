@@ -66,6 +66,7 @@ body {
 
 h1, h2, h3 {
     letter-spacing: 3px;
+    font-family: 'Playfair Display', serif;
 }
 
 h1 {
@@ -89,11 +90,17 @@ section {
     padding: 4% 0;
 }
 
+/*
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; 
+ */
+
 /* Header */
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
     align-items: center;
 }
 
@@ -109,7 +116,8 @@ header div {
 
 .board {
     display: inline-block;
-
+    margin-left: 2%;
+    border: 10px solid black;
 }
 
 .row {
@@ -139,11 +147,73 @@ header div {
 }
 
 .instruction .rules {
-    margin: 5% 15%;
+    margin: 5% 20%;
+}
+
+.instruction .rules p {
+    font-family: 'Roboto', sans-serif; 
+}
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3% 0;
+}
+
+footer div {
+    margin: .5% 0;
+}
+
+@media(max-width: 800px){
+    .board-sec {
+        flex-direction: column;
+    }
+
+    .instruction {
+        flex-direction: column-reverse;
+    }
+
+    .button {
+        margin-top: 3%;
+    }
+
+    .instruction .rules {
+        margin: 5% 10%;
+    }
+    
+}
+
+@media(max-width: 700px){
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
 }
